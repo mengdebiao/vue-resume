@@ -1,0 +1,156 @@
+{
+    "myInfo": {
+        "avatar": "../static/images/Mark.png",
+        "name": "Hi,我叫蒙德标",
+        "description": "一腔热血的激情 · 一夜失眠的折腾 · 一个像素的执着",
+        "position": "web前端工程师",
+        "infos": [
+            "姓名：蒙德标",
+            "年龄：24岁",
+            "学历：大专",
+            "工作经验：2年",
+            "毕业学校：柳州职业技术学院",
+            "专业：计算机网络技术",
+            "爱好：学习、旅游、听音乐、逛论坛",
+            "应聘职位：WEB前端工程师"
+        ],
+        "skills": [{
+            "type": 1,
+            "text": "HTML/HTML5"
+        }, {
+            "type": 1,
+            "text": "CSS/CSS3"
+        }, {
+            "type": 1,
+            "text": "DIV+CSS"
+        }, {
+            "type": 1,
+            "text": "Bootstrap"
+        }, {
+            "type": 1,
+            "text": "jQuery"
+        }, {
+            "type": 0,
+            "text": "JavaScript"
+        }, {
+            "type": 1,
+            "text": "Sublime Text"
+        }, {
+            "type": 1,
+            "text": "PhotoShop"
+        }, {
+            "type": 0,
+            "text": "Asp.net"
+        }, {
+            "type": 1,
+            "text": "webstorm"
+        }, {
+            "type": 1,
+            "text": "HBuilder"
+        }, {
+            "type": 0,
+            "text": "FIS3"
+        }, {
+            "type": 1,
+            "text": "Gulp"
+        }, {
+            "type": 1,
+            "text": "vue.js"
+        }, {
+            "type": 1,
+            "text": "Less"
+        }, {
+            "type": 1,
+            "text": "Ajax"
+        }, {
+            "type": 0,
+            "text": "AI"
+        }, {
+            "type": 0,
+            "text": "PHP"
+        }, {
+            "type": 0,
+            "text": "node"
+        }, {
+            "type": 0,
+            "text": "Angular"
+        }],
+        "works": [{
+            "year": "2014年",
+            "month": "10月",
+            "description": "柳州市网中网络策划中心(实习)"
+        }, {
+            "year": "2015年",
+            "month": "3月",
+            "description": "深圳市学龄科技有限公司"
+        }, {
+            "year": "2016年",
+            "month": "3月",
+            "description": "深圳云筑科技有限公司"
+        }, {
+            "year": "2017年",
+            "month": "1月",
+            "description": "正在寻找合适的工作中..."
+        }],
+        "production1": [{
+            "title": "雲雾个人网站",
+            "link": "http://www.dbdl.cc/",
+            "text": "http://www.dbdl.cc/",
+            "description": "我的个人网站。"
+        }, {
+            "title": "雲雾个人博客",
+            "link": "http://www.dbdl.cc/blog/",
+            "text": "http://www.dbdl.cc/blog/",
+            "description": "用bootstrap搭建的个人博客"
+        }, {
+            "title": "云筑圈5.0 Web App",
+            "link": "http://www.dbdl.cc/product/yunzo/html/first_contacts/contacts.html",
+            "text": "http://www.dbdl.cc/product/yunzo/",
+            "description": "MUI、H5、原生js编写的app"
+        }, {
+            "title": "《特产家》微商城",
+            "link": "http://www.dbdl.cc/product/techanjia/",
+            "text": "http://www.dbdl.cc/product/techanjia/",
+            "description": "一个简易版的微商城展示"
+        }],
+        "production2": [{
+            "title": "凤凰台移动端",
+            "link": "http://www.dbdl.cc/product/fht",
+            "text": "http://www.dbdl.cc/product/fht",
+            "description": "一个房地产的移动端项目"
+        }, {
+            "title": "儿童教育培训宣传网",
+            "link": "http://www.iqhouse.cn/",
+            "text": "http://www.iqhouse.cn/",
+            "description": "分简、繁、英三个版本"
+        }, {
+            "title": "仿魅族官网在线商店",
+            "link": "http://www.dbdl.cc/product/Meizu",
+            "text": "http://www.dbdl.cc/product/Meizu",
+            "description": "喜欢这种风格，就仿下来了"
+        }, {
+            "title": "模仿腾讯软件中心",
+            "link": "http://www.dbdl.cc/product/Tencent/",
+            "text": "http://www.dbdl.cc/product/Tencent/",
+            "description": "一个很简单的div+css布局"
+        }],
+        "hope": [
+            "工作地点：深圳—宝安、南山；",
+            "公司行业：不限；",
+            "期望薪资：9k"
+        ],
+        "callme": [{
+            "title": "邮箱：",
+            "link": "Mailto:734436664@qq.com",
+            "text": "734436664@qq.com"
+        }, {
+            "title": "电话：",
+            "link": "tel:18576689103",
+            "text": "18576689103"
+        }, {
+            "title": "QQ：",
+            "link": "http://wpa.qq.com/msgrd?v=3&uin=734436664&site=qq&menu=yes",
+            "text": "734436664"
+        }]
+    }
+}

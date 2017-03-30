@@ -1,0 +1,750 @@
+html {
+    -ms-touch-action: none;
+    /*阻止windows Phone 的默认触摸事件*/
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    *cursor: default;
+    overflow: hidden;
+    color: #fff;
+    font-family: "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Microsoft Yahei", sans-serif;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+#pageContain {
+    overflow: hidden;
+}
+
+.page {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 50px;
+    overflow: hidden;
+}
+
+.contain {
+    position: relative;
+    display: none;
+    top: 50%;
+    width: 100%;
+    height: 100%;
+    margin-top: -200px;
+    z-index: 0;
+}
+
+.current .contain,
+.slide .contain {
+    display: block;
+}
+
+.current {
+    display: block;
+    z-index: 1;
+}
+
+.slide {
+    display: block;
+    z-index: 2;
+}
+
+.swipe {
+    display: block;
+    z-index: 3;
+    -webkit-transition-duration: 0ms !important;
+    transition-duration: 0ms !important;
+}
+
+.section1 {
+    background: #4dd0e1;
+}
+
+.section2 {
+    background: #22c3aa;
+}
+
+.section3 {
+    background: #e8b118;
+}
+
+.section4 {
+    background: #78BC27;
+}
+
+.section5 {
+    background: #149b70;
+}
+
+.section6 {
+    background: #19B1E0;
+}
+
+#navBar {
+    position: absolute;
+    top: 50%;
+    right: 3%;
+    margin-top: -60px;
+    z-index: 3;
+}
+
+#navBar li {
+    width: 14px;
+    height: 14px;
+    margin-bottom: 10px;
+    background-color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    text-align: center;
+    border-radius: 50%;
+    transition: all .7s ease;
+}
+
+#navBar .active {
+    background: #fff;
+}
+
+
+/****************************** 没什么事，就是分着来玩的 **********************************/
+
+.text-center {
+    text-align: center;
+}
+
+.page .modal {
+    color: #36b5c5;
+    text-align: left;
+}
+
+.page .contain h4 {
+    margin-bottom: 1.25rem;
+    font-size: 2rem;
+}
+
+.section1 .contain {
+    text-align: center;
+}
+
+.section1 .contain .myavatar img {
+    border: 10px solid #36b5c5;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.section1 .contain .myname {
+    font-size: 32px;
+    letter-spacing: 2px;
+    text-shadow: 1px 2px #4dd0e1, 2px 3px #2caaba;
+}
+
+.section1 .contain .subtitle {
+    margin: 0.5em 0 0.25em 0;
+    color: #bcf1f8;
+    font-size: 1.1em;
+}
+
+.section1 .contain h5 {
+    margin: 12px 0 24px 0;
+    font-size: 22px;
+}
+
+.mybtn {
+    background-color: #36b5c5;
+}
+
+.mybtn:hover {
+    background-color: #239bab;
+}
+
+.section1 .contain .mydatas h6 {
+    margin-bottom: 20px;
+    color: #777;
+    font-size: 24px;
+}
+
+.section1 .contain .mydatas span {
+    margin-bottom: 8px;
+}
+
+
+/************** 简介弹出层 **************/
+
+.section2 .contain {
+    margin-top: -250px;
+}
+
+.section2 .contain .myskills a {
+    display: inline-block;
+    margin: 6px 3px;
+    padding: 4px 1rem;
+    background-color: #1fcbb1;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 1.5rem;
+    letter-spacing: .1rem;
+    white-space: nowrap;
+    text-align: center;
+    text-decoration: none;
+    border-radius: .4rem;
+}
+
+.section2 .contain .myskills {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.section2 .contain .myskills a.stress {
+    background-color: #37ddc4;
+}
+
+.section3 {
+    padding: 20px 0 20px 20px;
+}
+
+.section3 .contain {
+    margin-top: -250px;
+}
+
+.section3 .contain .experience {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.section3 .contain .experience .time-line {
+    position: absolute;
+    left: 0;
+    width: 68px;
+    height: 100%;
+    border-right: 4px solid #f59d43;
+    color: #149b70;
+}
+
+.section3 .contain .experience .work-content {
+    width: 100%;
+    height: 100%;
+    color: #fff;
+}
+
+.section3 .contain .experience .work-content .work-item {
+    position: relative;
+    width: 100%;
+    min-height: 50px;
+    padding-right: 30px;
+}
+
+.section3 .contain .experience .work-content .work-item .year-flag {
+    position: absolute;
+    left: 0px;
+    height: 60px;
+    padding-right: 28px;
+    line-height: 31px;
+    font-size: 16px;
+    text-align: right;
+}
+
+.section3 .contain .experience .work-content .work-item .year-flag i {
+    position: absolute;
+    top: 6px;
+    left: 54px;
+    height: 20px;
+    font-size: 24px;
+    line-height: 20px;
+    background-color: #e8b118;
+}
+
+.section3 .contain .experience .work-content .work-item .mouth-flag {
+    display: block;
+    position: absolute;
+    height: 60px;
+    padding-right: 28px;
+    line-height: 31px;
+    font-size: 14px;
+    text-align: right;
+}
+
+.section3 .contain .experience .work-content .work-item .mouth-flag span {
+    position: absolute;
+    left: 25px;
+    width: 30px;
+}
+
+.section3 .contain .experience .work-content .work-item .mouth-flag i {
+    position: absolute;
+    top: 8px;
+    left: 58px;
+    height: 13px;
+    font-size: 16px;
+    line-height: 13px;
+    background-color: #e8b118;
+}
+
+.section3 .contain .experience .work-content .work-item .work-box {
+    position: relative;
+    margin-left: 80px;
+    padding: 5px;
+    background-color: #ed9235;
+    border-radius: 5px;
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+}
+
+.section3 .contain .experience .work-content .work-item .work-box::before {
+    position: absolute;
+    left: -6px;
+    top: 9px;
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-right: 6px solid #ed9235;
+    border-bottom: 5px solid transparent;
+}
+
+.section3 .contain .experience .work-content .work-item .work-box p {
+    padding: 0;
+    margin: 0;
+}
+
+.section4 .p4bg {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 7%;
+    background: url(../images/bg4.png) repeat-x 0 0;
+    background-size: 100% 100%;
+    -webkit-animation: mountain 60s linear 0s infinite alternate both;
+    animation: mountain 60s linear 0s infinite alternate both;
+}
+
+.section4 .contain {
+    /*margin-top: -240px;*/
+}
+
+.section4 .contain h4 {
+    margin-bottom: 4px;
+}
+
+.section4 .contain .p4subtitle {
+    min-height: 12px;
+    margin-bottom: 10px;
+    color: #d42d41;
+    text-align: center;
+}
+
+.section4 .contain .collection {
+    max-width: 940px;
+    margin: 0 auto;
+    border: none;
+}
+
+.section4 .contain .collection .collection-item.avatar p {
+    font-size: 13px;
+    color: #f7f5f5;
+}
+
+.section4 .contain .collection .collection-item {
+    margin: 5px;
+    padding: 8px 8px 8px 72px;
+    background: none;
+    border: 1px solid #e0e0e0;
+}
+
+.section4 .contain .secondary-content {
+    color: #e7485b;
+}
+
+.collection-item > a span {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+}
+
+.section4 .contain p a {
+    color: #1192fb;
+    text-decoration: underline;
+}
+
+.section4 .contain .collection .collection-item.avatar i.circle {
+    font-size: 26px;
+}
+
+.section5 .contain .expect {
+    max-width: 800px;
+    margin: 5rem auto 0;
+}
+
+.section5 .contain .expect p {
+    margin: 0 0 10px;
+    font-size: 16px;
+}
+
+.section5 .contain .expect p i {
+    margin-right: 6px;
+}
+
+.section6 {
+    padding: 50px 30px;
+}
+
+.section6 .contain .callme {
+    max-width: 600px;
+    margin: 80px auto 20px;
+    text-align: center;
+}
+
+.section6 .contain .callme p,
+.section6 .contain .callme p a {
+    margin: 0;
+    color: #0f7c9d;
+    font-size: 18px;
+}
+
+.section6 .contain .social {
+    padding: 1rem 0;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.section6 .contain .social a img {
+    max-width: 50px;
+}
+
+.section6 .contain .btn {
+    position: inherit;
+    background: #0f7c9d;
+}
+
+#modal-wx img {
+    width: 160px;
+}
+
+#modal-mobile img {
+    width: 200px;
+}
+
+.section6 .share {
+    margin-top: 100px;
+    /*color: #0f90b8;*/
+    text-align: center;
+}
+
+.section6 .github-corner {
+    position: absolute;
+    right: 1px;
+    top: 1px;
+}
+
+
+/*用代码实现底部箭头指引效果*/
+
+.arrow {
+    display: none;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    z-index: 2;
+    display: inline-block;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    color: #fff;
+    letter-spacing: .1em;
+    text-decoration: none;
+    transition: opacity .3s;
+}
+
+.arrow span {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 22px;
+    height: 22px;
+    margin-left: -11px;
+    border-left: 2px solid #fff;
+    border-top: 2px solid #fff;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-animation: pageArrow 1.5s infinite;
+    animation: pageArrow 1.5s infinite;
+    box-sizing: border-box;
+}
+
+@-webkit-keyframes pageArrow {
+    0% {
+        -webkit-transform: rotate(45deg) translate(0, 0);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: rotate(45deg) translate(-20px, -20px);
+        opacity: 0;
+    }
+}
+
+@keyframes pageArrow {
+    0% {
+        transform: rotate(45deg) translate(0, 0);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: rotate(45deg) translate(-20px, -20px);
+        opacity: 0;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .page {
+        padding: 30px;
+    }
+    .section3 .contain .experience .work-content .work-item {
+        padding-right: 0;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    #navBar {
+        /*display: none;*/
+    }
+    #navBar li {
+        width: 8px;
+        height: 8px;
+    }
+    .collection-item p a {
+        display: none;
+    }
+    .section4 .contain .collection .collection-item.avatar p {
+        color: #E0E0E0;
+    }
+    .section4 .contain .collection .collection-item {
+        width: 97%;
+    }
+    .arrow {
+        display: block;
+    }
+    .arrow span {
+        display: block;
+    }
+    .section6 .contain .social a img {
+        max-width: 42px;
+    }
+    .section3 .contain .experience .work-content .work-item {
+        min-height: 40px;
+    }
+    .section3 .contain {
+        margin-top: -240px;
+    }
+    .page .modal {
+        left: 50%;
+        margin-left: -40%;
+    }
+    .section6 .share {
+        margin-top: 20%;
+    }
+    .section6 #mobile-btn {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 601px) {
+    .row .col.m5 {
+        width: 48.666667%;
+    }
+}
+
+
+/*musicBtn start*/
+
+.musicBtn {
+    display: none;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 999;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.musicBtn div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url(../images/music_icon.png) no-repeat center center;
+    background-size: contain;
+}
+
+.musicBtn span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 10px;
+    height: 15px;
+    margin: -6px 0 0 -5px;
+    background: url(../images/note.png) no-repeat center center;
+    background-size: contain;
+    opacity: 0;
+}
+
+.musicPlay div {
+    -webkit-animation: music 40s linear 0s infinite;
+}
+
+.musicPlay span:nth-of-type(1) {
+    -webkit-animation: note1 2s linear 0s infinite;
+}
+
+.musicPlay span:nth-of-type(2) {
+    -webkit-animation: note2 2s linear 0.4s infinite;
+}
+
+.musicPlay span:nth-of-type(3) {
+    -webkit-animation: note3 2s linear 0.8s infinite;
+}
+
+.musicPlay span:nth-of-type(4) {
+    -webkit-animation: note4 2s linear 1.2s infinite;
+}
+
+.musicPlay span:nth-of-type(5) {
+    -webkit-animation: note5 2s linear 1.6s infinite;
+}
+
+@-webkit-keyframes music {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    0% {
+        -webkit-transform: rotate(3600deg);
+    }
+}
+
+@-webkit-keyframes note1 {
+    0% {
+        -webkit-transform: translate(0, 0) scale(0.1) rotate(180deg);
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    60% {
+        opacity: 1;
+    }
+    80% {
+        -webkit-transform: translate(-50px, -50px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translate(-50px, -50px);
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes note2 {
+    0% {
+        -webkit-transform: translate(0, 0) scale(0.15) rotate(140deg);
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    60% {
+        opacity: 1;
+    }
+    80% {
+        -webkit-transform: translate(-35px, -50px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translate(-35px, -50px);
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes note3 {
+    0% {
+        -webkit-transform: translate(0, 0) scale(0.2) rotate(100deg);
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    60% {
+        opacity: 1;
+    }
+    80% {
+        -webkit-transform: translate(-20px, -50px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translate(-20px, -50px);
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes note4 {
+    0% {
+        -webkit-transform: translate(0, 0) scale(0.25) rotate(60deg);
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    60% {
+        opacity: 1;
+    }
+    80% {
+        -webkit-transform: translate(-10px, -50px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translate(-10px, -50px);
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes note5 {
+    0% {
+        -webkit-transform: translate(0, 0) scale(0.1) rotate(20deg);
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    60% {
+        opacity: 1;
+    }
+    80% {
+        -webkit-transform: translate(10px, -50px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translate(10px, -50px);
+        opacity: 0;
+    }
+}
+
+
+/*musicBtn end*/
